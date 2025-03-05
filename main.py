@@ -13,7 +13,6 @@ def draw_ball(screen):
     pygame.draw.ellipse(screen, config.TAN, (390, 320, 10, 100))
     pygame.draw.ellipse(screen, config.TAN, (430, 320, 10, 100))
 
-text_font = pygame.font.Font('c:\WINDOWS\Fonts\ARIAL.TTF', 30)
 
 
 def init_game ():
@@ -32,10 +31,13 @@ def handle_events ():
     return True
 
 def main():
+    pygame.font.init()
 
     def draw_text(text, font, text_col, x, y):
         img = font.render(text, True, text_col)
-        screen.blit(img, (x,y))
+        screen.blit(img, (x,y)) 
+
+    text_font = pygame.font.Font('ARIALN.TTF', 100)
 
     screen = init_game()
     clock = pygame.time.Clock() # Initialize the clock here
@@ -44,7 +46,7 @@ def main():
         running = handle_events()
         screen.fill(config.BLUEGAMBIT) # Use color from config
 
-        draw_text('Bread', text_font, (0,0,0), 220, 150)
+        draw_text('Bread', text_font, (110,110,110), 250, 200)
 
         draw_ball(screen)
 
