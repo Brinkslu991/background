@@ -13,7 +13,8 @@ def draw_ball(screen):
     pygame.draw.ellipse(screen, config.TAN, (390, 320, 10, 100))
     pygame.draw.ellipse(screen, config.TAN, (430, 320, 10, 100))
 
-text_font = pygame.font.SysFont('Comic Sans MS', 30)
+text_font = pygame.font.Font('c:\WINDOWS\Fonts\ARIAL.TTF', 30)
+
 
 def init_game ():
     pygame.init()
