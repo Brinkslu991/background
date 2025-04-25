@@ -20,9 +20,6 @@ def draw_table(screen):
     pygame.draw.line(screen, config.DARK_TAN, (525, 456), (525, 700),10)
     pygame.draw.line(screen, config.ALMONDBROWN, (550, 450), (550, 700),10)
 
-
-
-
 def init_game ():
     pygame.init()
     screen = pygame.display.set_mode((config.WINDOW_WIDTH, config.WINDOW_HEIGHT)) # Use constants from config
@@ -64,8 +61,6 @@ def main():
         
         # Limit the frame rate to the specified frames per second (FPS)
         clock.tick(config.FPS) # Use the clock to control the frame rate
-
-        
 
     pygame.quit()
 
